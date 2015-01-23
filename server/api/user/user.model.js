@@ -19,7 +19,7 @@ var UserSchema = new Schema({
   twitter: {},
   linkedin: {},
   google: {},
-  github: {}
+  watsonData: Array
 });
 
 /**

@@ -4,7 +4,8 @@ var User = require('./user.model');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
-
+var http = require('http');
+var watson = require('watson-developer-cloud-alpha');
 var validationError = function(res, err) {
   return res.json(422, err);
 };
@@ -105,6 +106,39 @@ exports.changePassword = function(req, res, next) {
     }
   });
 };
+exports.makeWatson = function (req, res) {
+  console.log(req.body, 'req.bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
+  console.log('hit on backend')
+var user_modeling = watson.user_modeling({
+  username: '06dae54a-7ee4-463b-bc16-6cf840af3187',
+  password: 'RKkfjuMPX4fU',
+  version: 'v2'
+});
+
+user_modeling.profile({
+  text: req.body.traitObj
+  },
+  function (err, response) {
+    if (err)
+      console.log('error:', err);
+    else{
+      
+      
+  User.findById(req.body._id).exec(function(err, user) {
+
+    user.watsonData = response
+    if (err) return res.send(500)
+    user.save(function(err, user) {
+      if (err) return res.send(500)
+        console.log('hit user saved')
+      return res.send(200)
+    })
+  })
+  }
+});
+}
+
+// exports.postWatson
 
 /**
  * Get my info

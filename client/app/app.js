@@ -10,7 +10,8 @@ angular.module('linkedinFullstackApp', [
   'xeditable', 
   'ngLinkedIn', 
   'ngMaterial',
-  'ngDialog'
+  'ngDialog',
+  'percentage'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
