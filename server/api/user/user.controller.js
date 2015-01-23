@@ -1,6 +1,7 @@
 'use strict';
 
 var User = require('./user.model');
+var Twitter = require('../twitter/twitter.model');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
@@ -129,6 +130,39 @@ user_modeling.profile({
     user.watsonData = response
     if (err) return res.send(500)
     user.save(function(err, user) {
+      if (err) return res.send(500)
+        console.log('hit user saved')
+      return res.send(200)
+    })
+  })
+  }
+});
+}
+
+
+exports.makeTweetWatson = function (req, res) {
+  console.log(req.body, 'req.bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
+  console.log('hit on backend')
+var user_modeling = watson.user_modeling({
+  username: '06dae54a-7ee4-463b-bc16-6cf840af3187',
+  password: 'RKkfjuMPX4fU',
+  version: 'v2'
+});
+
+user_modeling.profile({
+  text: req.body.data
+  },
+  function (err, response) {
+    if (err)
+      console.log('error:', err);
+    else{
+      
+      
+  Twitter.findById(req.body._id).exec(function(err, twitter) {
+
+    twitter.watsonData = response
+    if (err) return res.send(500)
+    twitter.save(function(err, twitter) {
       if (err) return res.send(500)
         console.log('hit user saved')
       return res.send(200)

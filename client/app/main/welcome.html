@@ -1,26 +1,125 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
 
 
 
-<h2>Big Five</h2>
-<div ng-repeat = 'trait in profileInformation.watsonData[0].tree.children[0].children[0].children[0].children'>
-{{trait.name}}
-{{trait.percentage | percentage}}
+
+<!-- 
+<div class='row'>
+	<div class='col-md-3'>
+		<h2 ng-click='bigFiveFunction()'>Big Five</h2>
+		<div ng-hide='bigFive' ng-show='!bigFive' ng-repeat = 'bigFive in profileInformation.watsonData[0].tree.children[0].children[0].children[0].children'>
+			{{bigFive.name}}
+			{{bigFive.percentage | percentage}}
+		</div>
+		<h2>Big Five2</h2>
+		<div ng-repeat = 'bigFive2 in profileInformation.watsonData[0].tree.children[0].children[0].children[1].children'>
+			{{bigFive2.name}}
+			{{bigFive2.percentage | percentage}}
+		</div>
+		<h2>Big Five3</h2>
+		<div ng-repeat = 'bigFive3 in profileInformation.watsonData[0].tree.children[0].children[0].children[2].children'>
+			{{bigFive3.name}}
+			{{bigFive3.percentage | percentage}}
+		</div>
+		<h2>Big Five4</h2>
+		<div ng-repeat = 'bigFive4 in profileInformation.watsonData[0].tree.children[0].children[0].children[3].children'>
+			{{bigFive4.name}}
+			{{bigFive4.percentage | percentage}}
+		</div>
+		<h2>Big Five5</h2>
+		<div ng-repeat = 'bigFive5 in profileInformation.watsonData[0].tree.children[0].children[0].children[4].children'>
+			{{bigFive5.name}}
+			{{bigFive5.percentage | percentage}}
+		</div>
+		<h2>Needs</h2>
+		<div ng-repeat = 'needs in profileInformation.watsonData[0].tree.children[1].children[0].children'>
+			{{needs.name}}
+			{{needs.percentage | percentage}}
+		</div>
+		<md-button>Values</md-button>
+		<div ng-repeat = 'values in profileInformation.watsonData[0].tree.children[2].children[0].children'>
+			{{values.name}}
+			{{values.percentage | percentage}}
+		</div>
+	</div>
+	<div class='col-md-9'>
+		<div class="changeMe"></div>
+	</div>
 </div>
-<div ng-repeat = 'trait3 in profileInformation.watsonData[0].tree.children[0].children[1].children[0].children'>
-{{trait3.name}}
-{{trait3.percentage | percentage}}
-</div>
-<h2>Needs</h2>
-<div ng-repeat = 'trait1 in profileInformation.watsonData[0].tree.children[1].children[0].children'>
-{{trait1.name}}
-{{trait1.percentage | percentage}}
-</div>
-<h2>values</h2>
-<div ng-repeat = 'trait2 in profileInformation.watsonData[0].tree.children[2].children[0].children'>
-{{trait2.name}}
-{{trait2.percentage | percentage}}
-</div>
+ -->
+
+<div class="tabsdemoStaticTabs">
+<md-tabs class="md-accent" md-selected="data.selectedIndex">
+      <md-tab id="tab1" aria-controls="tab1-content">
+        Big Five
+      </md-tab>
 
 
+      <md-tab id="tab2" aria-controls="tab2-content">
+       Needs
+      </md-tab>
+
+      <md-tab id="tab3" aria-controls="tab3-content">
+        Values
+      </md-tab>
+    </md-tabs>
+    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+        	<div class="row">
+        	
+            <div class= 'col-md-2' ng-repeat = 'bigFive in profileInformation.watsonData[0].tree.children[0].children[0].children[0].children'>
+			{{bigFive.name}}
+			{{bigFive.percentage | percentage}}
+		</div>
+			
+			
+			<div class="col-md-2" ng-repeat = 'bigFive2 in profileInformation.watsonData[0].tree.children[0].children[0].children[1].children'>
+			{{bigFive2.name}}
+			{{bigFive2.percentage | percentage}}
+			</div>
+			
+			<div class= 'col-md-2' ng-repeat = 'bigFive3 in profileInformation.watsonData[0].tree.children[0].children[0].children[2].children'>
+			{{bigFive3.name}}
+			{{bigFive3.percentage | percentage}}
+			</div>
+			
+			<div class= 'col-md-2'ng-repeat = 'bigFive4 in profileInformation.watsonData[0].tree.children[0].children[0].children[3].children'>
+			{{bigFive4.name}}
+			{{bigFive4.percentage | percentage}}
+			</div>
+			
+			<div class= 'col-md-2' ng-repeat = 'bigFive5 in profileInformation.watsonData[0].tree.children[0].children[0].children[4].children'>
+			{{bigFive5.name}}
+			{{bigFive5.percentage | percentage}}
+			</div>
+			</div>
+      	</div>
+     
+        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
+        	<center>
+			<div ng-repeat = 'needs in profileInformation.watsonData[0].tree.children[1].children[0].children'>
+			{{needs.name}}
+			{{needs.percentage | percentage}}
+			</div>
+		</center>
+       		 </div>
+        <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+           
+           <center>
+			<div ng-repeat = 'values in profileInformation.watsonData[0].tree.children[2].children[0].children'>
+			{{values.name}}
+			{{values.percentage | percentage}}
+			</div>
+		</center>
+        </div>
+    </ng-switch>
+  </div>
+<center>
 <div class="changeMe"></div>
+</center>
+
+{{profileInformation.linkedin.pictureUrl}}
+
+
+
 

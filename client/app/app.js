@@ -11,7 +11,8 @@ angular.module('linkedinFullstackApp', [
   'ngLinkedIn', 
   'ngMaterial',
   'ngDialog',
-  'percentage'
+  'percentage',
+  'ui.bootstrap'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

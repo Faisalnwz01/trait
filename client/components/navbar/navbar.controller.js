@@ -6,8 +6,8 @@ angular.module('linkedinFullstackApp')
       'title': 'Home',
       'link': '/'
     }, {
-      'title': 'Find A Job',
-      'link': '/jobs'
+      'title': 'Tweet Traits',
+      'link': '/tweetdata'
     }];
 
     $scope.isCollapsed = true;
