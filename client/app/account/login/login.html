@@ -1,59 +1,73 @@
+<!-- Navigation -->
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container nopadding">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Resify</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container nopadding">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="#">Resify</a>
+                </div><!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- Header -->
+
+
+             <div layout="row" layout-wrap>
+                <div flex="50">
+        <div class="intro-header">
+                <div class="row">
+                        <div class="intro-message">
+                            <h1>
+                                Welcome to Trait
+                            </h1>
+                            <h3>
+                                See what does your Linkdin Profile say about YOU?
+                            </h3>
+                            <hr class="intro-divider">
+                            <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <form class="form" name="form" ng-submit="login(form)" novalidate="">
+                                        <button class="btn btn-default btn-lg" ng-click="loginOauth('linkedin')"><span class="network-name">Connect With Linkedin</span></button>
+                                    </form><a class="btn btn-twitter" ng-click="loginOauth('linkedin')"> Connect with Linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
         </div>
-        <!-- /.container -->
-    </nav>
+                </div>
+                <div flex="50">
+               <div class="intro-headerTwitter">
+                <div class="row">
+                        <div class="intro-message">
+                            <h1>
+                                Welcome to Trait
+                            </h1>
+                            <h3>
+                                Explore User-Modeling thru Twitter
+                            </h3>
+                            <hr class="intro-divider">
+                            <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <form class="form" name="form" ng-submit="login(form)" novalidate="">
+                                       <a href="/tweetdata"> <button class="btn btn-default btn-lg"  ><span class="network-name">Connect With Twitter</span></button></a>
+                                    </form><a class="btn btn-twitter" href="/tweetdata"> Connect with Twitter</a>
 
-    <!-- Header -->
-    <div class="intro-header">
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+        </div>
+                </div>
 
-        <div class="container nopadding">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Welcome to Resify</h1>
-                        <h3>Your Online Resume Builder</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                        
-                            <li>
-                                       <form class="form" name="form" ng-submit="login(form)" novalidate>
-                            <button class="btn btn-default btn-lg" ng-click="loginOauth('linkedin')"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Connect With Linkedin</span></button>
-                         </form>
-                           
-          <a class="btn btn-twitter" href="/tweetdata">
-            <i class="fa fa-twitter"></i> Connect with Twitter
-          </a>
-       
-<!--   
-  <hr>
- -->
-
+              </div>

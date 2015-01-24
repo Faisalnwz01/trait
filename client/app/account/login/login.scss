@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    
+
 }
 
 .lead {
@@ -25,14 +25,25 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+     background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
+
+}
+.intro-headerTwitter {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+     background: url(../img/Twitter-Bird-Wallpapers.jpg) no-repeat center center;
+    background-size: cover;
+
 }
 
 .intro-message {
-    position: relative;
+    position: absolute;
     padding-top: 20%;
     padding-bottom: 20%;
+
 }
 
 .intro-message > h1 {
