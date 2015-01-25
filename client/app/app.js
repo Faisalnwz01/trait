@@ -7,12 +7,13 @@ angular.module('linkedinFullstackApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'xeditable', 
-  'ngLinkedIn', 
+  'xeditable',
+  'ngLinkedIn',
   'ngMaterial',
   'ngDialog',
   'percentage',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  "ngModal"
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
