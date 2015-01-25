@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('linkedinFullstackApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
+  .controller('LoginCtrl', function ($scope, Auth, $modal, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -26,4 +26,14 @@ angular.module('linkedinFullstackApp')
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
     };
+
+
+    //the start of the model *********************
+    $scope.openModal = function() {
+      $scope.modal = $modal.open({
+        templateUrl: '../../components/modal/dataModal.html',
+        scope: $scope
+      })
+    };
+
   });
