@@ -4,6 +4,7 @@ angular.module('linkedinFullstackApp')
   .controller('TweetdataCtrl', function ($scope, $http, User, d3, socket, $linkedIn, $state, Auth, ngDialog) {
    
     $scope.tweetUser = '';
+    $scope.search = [1, 2, 3]
 
 	
 $scope.sendUser = function(username){
@@ -18,6 +19,7 @@ $scope.sendUser = function(username){
 	    	console.log($scope.twitterData, 'tiwtter data')		
 			    $http.get('api/twitters/'+ $scope.tweetData._id).success(function(data){
 			    	$scope.twitterData = data
+			    	
 			    	d3.pieChart($scope.twitterData);
 
   
@@ -91,6 +93,8 @@ $scope.sendUser = function(username){
 				$scope.profileInformation.traitObj = watsonDataSting
 				$scope.profileInformation.watsonData;
 				$scope.update()
+
+
 					//console.log('$scope.profileInformation.watsonData', $scope.profileInformation.watsonData)
 
 				//console.log($scope.profileInformation.traitObj)

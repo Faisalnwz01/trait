@@ -1,103 +1,69 @@
-<!-- Navigation -->
 
-        <nav class="navbar navbar-warning navbar-fixed-top" role="navigation">
-            <div class="container nopadding">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="#"><strong>Trait</strong></a>
-                </div><!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#"><strong>About</strong></a>
-                        </li>
-                        <li>
-                            <a href="#"><strong>Services</strong></a>
-                        </li>
-                        <li>
-                            <a href="#"><strong>Contact</strong></a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container -->
-        </nav><!-- Header -->
 
-<h2>this is a title</h2>
-
-             <div layout="row" layout-wrap>
-                <div flex="33">
+                   <div class="page-header title101" align="center"><i> <h1>Welcome to Trait<br><small>Discover The Person Behind the Text</small></h1></i>
+                   </div>
+                 
+<div layout="row" layout-wrap>
+    <div flex>
         <div class="intro-headerLinkdin">
-                <div class="row">
-                        <div class="intro-message">
-                            <h1>
-                                Linkedin Trait
-                            </h1>
-                            <a ng-click="openModal()" class="btn btn-twitter"> What is Trait?</a>
-                            <h3>
-                                See what does your Linkedin Profile say about YOU?
-                            </h3>
-                            <hr class="intro-divider">
-                            <ul class="list-inline intro-social-buttons">
-                                <li>
-                                    <form class="form" name="form" ng-submit="login(form)" novalidate="">
-                                        <button class="btn btn-default btn-lg" ng-click="loginOauth('linkedin')"><span class="network-name">Connect With Linkedin</span></button>
-                                    </form><a class="btn btn-twitter" ng-click="loginOauth('linkedin')"> Connect with Linkedin</a>
-                                </li>
-                            </ul>
-                        </div>
+           
+                <div class="intro-message">
+                    <a ng-click="openModal()" class="btn btn-twitter"> What is Trait?</a>
+                    <h3>
+                    What Does your Linkedin<br> Profile say about you?
+                    </h3>
+                    <hr class="intro-divider">
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <form class="form" name="form" ng-submit="login(form)" novalidate="">
+                                <button class="btn btn-default btn-lg" ng-click="loginOauth('linkedin')"><span class="network-name">Connect With Linkedin</span></button>
+                                </form><a class="btn btn-twitter" ng-click="loginOauth('linkedin')"> Connect with Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            
         </div>
-                </div>
-                <div flex="33">
-               <div class="intro-headerTwitter">
-                <div class="row">
-                        <div class="intro-message">
-                            <h1>
-                                Twitter Trait
-                            </h1>
-
-                              <a ng-click="openModal()" class="btn btn-twitter"> What is user-modeling?</a>
-                            <h3>
-                                Explore User-Modeling thru Twitter
-                            </h3>
-                            <hr class="intro-divider">
-                            <ul class="list-inline intro-social-buttons">
-                                <li>
-                                    <form class="form" name="form" ng-submit="login(form)" novalidate="">
-                                       <a href="/tweetdata"> <button class="btn btn-default btn-lg"  ><span class="network-name">Explore With Twitter</span></button></a>
+        <div flex>
+            <div class="intro-headerTwitter">
+               
+                    <div class="intro-message">
+                        
+                        <a ng-click="openModal()" class="btn btn-twitter"> What is user-modeling?</a>
+                        <h3>
+                        Explore User-Modeling<br> thru Twitter
+                        </h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <form class="form" name="form" ng-submit="login(form)" novalidate="">
+                                    <a href="/tweetdata"> <button class="btn btn-default btn-lg"  ><span class="network-name">Explore With Twitter</span></button></a>
                                     </form><a class="btn btn-twitter" href="/tweetdata"> Explore with Twitter</a>
-
                                 </li>
                             </ul>
                         </div>
+                   
                 </div>
-        </div>
-                </div>
-
-
-<div flex="33">
-               <div class="intro-headerYour">
-                <div class="row">
+            </div>
+            <div flex>
+                <div class="intro-headerYour">
+                 
                         <div class="intro-message">
-                            <h1>
-                                Your Trait
-                            </h1>
-
-                              <a ng-click="openModal()" class="btn btn-twitter"> What is user-modeling?</a>
+                            
+                            <a ng-click="openModal()" class="btn btn-twitter"> Discover Trait</a>
                             <h3>
-                                Explore User-Modeling
+                            Explore User-Modeling<br> with any text
                             </h3>
                             <hr class="intro-divider">
                             <ul class="list-inline intro-social-buttons">
                                 <li>
                                     <form class="form" name="form" ng-submit="login(form)" novalidate="">
-                                       <a href="/freeWrite"> <button class="btn btn-default btn-lg"  ><span class="network-name">Write Your Own Trait</span></button></a>
-                                    </form><a class="btn btn-twitter" href="/freeWrite"> Write Your Own Trait</a>
-
-                                </li>
-                            </ul>
-                        </div>
+                                        <a href="/freeWrite"> <button class="btn btn-default btn-lg"  ><span class="network-name">Write Your Own Trait</span></button></a>
+                                        </form><a class="btn btn-twitter" href="/freeWrite"> Write Your Own Trait</a>
+                                    </li>
+                                </ul>
+                            </div>
+                       
+                    </div>
                 </div>
-        </div>
-                </div>
-              </div>
+            </div>

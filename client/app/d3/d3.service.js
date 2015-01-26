@@ -15,7 +15,8 @@ angular.module('linkedinFullstackApp')
           var widgetWidth = 900;
           var widgetHeight = 900;
           var theProfile = watsonData.watsonData[0]
-          var personImageUrl = "\/images\/watsonData";
+          // var personImageUrl = "\/images\/watsonData";
+          var title = watsonData.searchTerm
 
          
 
@@ -637,7 +638,12 @@ angular.module('linkedinFullstackApp')
 
 
           // Trigger render
-          d3.select('.changeMe').attr("id", widgetId).classed({
+          d3.select('.changeMe').attr("id", widgetId).append("text")
+        .style("font-size", "23px")
+        .style("align", "center")
+        .style("text-decoration", "underline")  
+        .text(title)
+        .classed({
             'chartDiv': true,
             'changeMe': false
           });
@@ -710,9 +716,11 @@ angular.module('linkedinFullstackApp')
             }
           };
 
+          var text = 'testing'
+
           widget.dimH = widgetHeight;
           widget.dimW = widgetWidth;
-          widget.d3vis.attr("width", widget.dimW).attr("height", widget.dimH);
+          widget.d3vis.attr("width", widget.dimW).attr("height", widget.dimH); 
           renderChart.call(widget);
           widget.expandAll.call(widget);
           if (personImageUrl) widget.addPersonImage.call(widget, personImageUrl);

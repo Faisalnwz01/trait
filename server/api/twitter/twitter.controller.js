@@ -49,12 +49,15 @@ exports.create = function(req, res) {
 tweetUser = tweetsplit.join('')
   
   
-  T.get('search/tweets', { q: 'from:@'+ tweetUser, count: 100 }, function(err, data, response) {
+  T.get('search/tweets', { q: 'from:@'+ tweetUser, count: 20 }, function(err, data, response) {
    
 console.log(data);
 for (var i =0;  i< data.statuses.length; i++){
   tweetsString  += data.statuses[i].text + " "; 
   }
+while (tweetsString.split(' ').length < 200) {
+          tweetsString += tweetsString
+        }
   Twitter.create({data: tweetsString, searchTerm: tweetUser }, function(err, twitter) {
     var twitterId = twitter._id
     if(err) { return handleError(res, err); }

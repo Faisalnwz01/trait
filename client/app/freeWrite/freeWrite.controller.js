@@ -11,13 +11,10 @@ $scope.sendUser = function(username){
 
 	$scope.profileInformation.traitObj = $scope.freeText
 				$scope.profileInformation.watsonData;
-	
 	    	$http.post('/api/users/freeText', $scope.profileInformation).success(function(data){	
-			     console.log(data)
 			     $scope.twitterData = data
 			    	 d3.pieChart($scope.twitterData);
 	    	})
-
     	
 
     // $scope.update(); 
