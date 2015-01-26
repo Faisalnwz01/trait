@@ -48,6 +48,19 @@
 </div>
  -->
 
+
+	<br>
+<center>
+ <h2>Below is your Linkedin Resume Analysis</h2>
+ 
+</center>
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 <div class="tabsdemoStaticTabs">
 <md-tabs class="md-accent" md-selected="data.selectedIndex">
       <md-tab id="tab1" aria-controls="tab1-content">
@@ -66,33 +79,52 @@
     <ng-switch on="data.selectedIndex" class="tabpanel-container">
         <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
         	<div class="row">
+        		<div class= 'col-md-1'>
+      </div>
+      <div class= 'col-md-2 col-sm-2'>
+        <h3>{{profileInformation.watsonData[0].tree.children[0].children[0].children[0].name}}</h3>
         	
-            <div class= 'col-md-2' ng-repeat = 'bigFive in profileInformation.watsonData[0].tree.children[0].children[0].children[0].children'>
+            <div ng-repeat = 'bigFive in profileInformation.watsonData[0].tree.children[0].children[0].children[0].children'>
 			{{bigFive.name}}
 			{{bigFive.percentage | percentage}}
 		</div>
+		</div>
 			
+			 <div class= 'col-md-2 col-sm-2'>
+        <h3>{{profileInformation.watsonData[0].tree.children[0].children[0].children[1].name}}</h3>
 			
-			<div class="col-md-2" ng-repeat = 'bigFive2 in profileInformation.watsonData[0].tree.children[0].children[0].children[1].children'>
+			<div ng-repeat = 'bigFive2 in profileInformation.watsonData[0].tree.children[0].children[0].children[1].children'>
 			{{bigFive2.name}}
 			{{bigFive2.percentage | percentage}}
 			</div>
+		</div>
+
+		 <div class= 'col-md-2 col-sm-2'>
+        <h3>{{profileInformation.watsonData[0].tree.children[0].children[0].children[2].name}}</h3>
 			
-			<div class= 'col-md-2' ng-repeat = 'bigFive3 in profileInformation.watsonData[0].tree.children[0].children[0].children[2].children'>
+			<div  ng-repeat = 'bigFive3 in profileInformation.watsonData[0].tree.children[0].children[0].children[2].children'>
 			{{bigFive3.name}}
 			{{bigFive3.percentage | percentage}}
 			</div>
+
+		</div>
 			
-			<div class= 'col-md-2'ng-repeat = 'bigFive4 in profileInformation.watsonData[0].tree.children[0].children[0].children[3].children'>
+			 <div class= 'col-md-2 col-sm-2'>
+        <h3>{{profileInformation.watsonData[0].tree.children[0].children[0].children[3].name}}</h3>
+			<div ng-repeat = 'bigFive4 in profileInformation.watsonData[0].tree.children[0].children[0].children[3].children'>
 			{{bigFive4.name}}
 			{{bigFive4.percentage | percentage}}
 			</div>
+		</div>
 			
-			<div class= 'col-md-2' ng-repeat = 'bigFive5 in profileInformation.watsonData[0].tree.children[0].children[0].children[4].children'>
+			 <div class= 'col-md-2 col-sm-2'>
+        <h3>{{profileInformation.watsonData[0].tree.children[0].children[0].children[4].name}}</h3>
+			<div ng-repeat = 'bigFive5 in profileInformation.watsonData[0].tree.children[0].children[0].children[4].children'>
 			{{bigFive5.name}}
 			{{bigFive5.percentage | percentage}}
 			</div>
 			</div>
+		</div>
       	</div>
      
         <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
@@ -114,11 +146,16 @@
         </div>
     </ng-switch>
   </div>
+   <br>
+  <br>
+  <br>
 <center>
+	<h3>{{profileInformation.name}}'s Resume Analysis</h3>
 <div class="changeMe"></div>
 </center>
 
-{{profileInformation.linkedin.pictureUrl}}
+
+
 
 
 

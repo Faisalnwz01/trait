@@ -29,10 +29,12 @@ angular.module('linkedinFullstackApp')
 
 
 				$http.post('/api/users/getWatson', $scope.profileInformation).success(function(data) {
-					console.log(data)
+					$http.get('/api/users/me').success(function(ProfileData) {
+				$scope.profileInformation = ProfileData;
+				d3.pieChart($scope.profileInformation);
+				})
 
 				})
-				d3.pieChart($scope.profileInformation);
 			})
 
 		}

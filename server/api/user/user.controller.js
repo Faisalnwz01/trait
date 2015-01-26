@@ -139,6 +139,32 @@ user_modeling.profile({
 });
 }
 
+exports.freeText = function (req, res) {
+  console.log(req.body, 'req.bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
+  console.log('hit on backend')
+var user_modeling = watson.user_modeling({
+  username: '06dae54a-7ee4-463b-bc16-6cf840af3187',
+  password: 'RKkfjuMPX4fU',
+  version: 'v2'
+});
+
+user_modeling.profile({
+  text: req.body.traitObj
+  },
+  function (err, response) {
+    if (err)
+      console.log('error:', err);
+    else{
+      Twitter.create(req.body, function(err, twitter) {
+      twitter.watsonData = response
+    var twitterId = twitter._id
+    if(err) { return handleError(res, err); }
+    return res.json(201, twitter);
+  });
+  }
+});
+}
+
 
 exports.makeTweetWatson = function (req, res) {
   console.log(req.body, 'req.bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')

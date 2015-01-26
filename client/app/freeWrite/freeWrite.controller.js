@@ -1,33 +1,25 @@
 'use strict';
 
 angular.module('linkedinFullstackApp')
-  .controller('TweetdataCtrl', function ($scope, $http, User, d3, socket, $linkedIn, $state, Auth, ngDialog) {
+  .controller('FreeWriteCtrl', function ($scope, $http, User, d3, socket, $linkedIn, $state, Auth, ngDialog) {
    
-    $scope.tweetUser = '';
+    $scope.freeText =""
+    $scope.profileInformation = {};
 
-	
+	$scope.searchs = []; 
 $scope.sendUser = function(username){
-	var obj = {user: username, 
-	           twitter: ''}
-    $http.post('/api/twitters/', obj).success(function(data){
-       $scope.tweetData = data
-        $http.get('/api/twitters/'+ $scope.tweetData._id).success(function(data){
-	    	$scope.twitterData = data
-	    	$scope.twitterData.watsonData;
-	    	$http.post('/api/users/getWatsonTweet', $scope.twitterData).success(function(data){
-	    	console.log($scope.twitterData, 'tiwtter data')		
-			    $http.get('api/twitters/'+ $scope.tweetData._id).success(function(data){
-			    	$scope.twitterData = data
-			    	d3.pieChart($scope.twitterData);
 
-  
-
-			    })
+	$scope.profileInformation.traitObj = $scope.freeText
+				$scope.profileInformation.watsonData;
+	
+	    	$http.post('/api/users/freeText', $scope.profileInformation).success(function(data){	
+			     console.log(data)
+			     $scope.twitterData = data
+			    	 d3.pieChart($scope.twitterData);
 	    	})
 
-    	})
+    	
 
-   })
     // $scope.update(); 
 
    

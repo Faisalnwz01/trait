@@ -5,7 +5,8 @@ var mongoose = require('mongoose'),
 
 var TwitterSchema = new Schema({
   data: String,
-  watsonData: Array
+  watsonData: Array, 
+  searchTerm: String
 });
 
 module.exports = mongoose.model('Twitter', TwitterSchema);

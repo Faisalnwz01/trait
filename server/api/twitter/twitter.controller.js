@@ -39,18 +39,23 @@ exports.show = function(req, res) {
 // };
 
 exports.create = function(req, res) {
-  console.log(req.body.user, 'userrrrrrrrrrrrrrrrrrrrrr')
+  
   var tweetUser = req.body.user
   var tweetsString ='';
+ var tweetsplit = tweetUser.split('')
+ if(tweetsplit[0]=== '@'){
+   tweetsplit[0]=''
+}
+tweetUser = tweetsplit.join('')
   
   
-  T.get('search/tweets', { q: 'from:@'+ tweetUser, count: 10 }, function(err, data, response) {
+  T.get('search/tweets', { q: 'from:@'+ tweetUser, count: 100 }, function(err, data, response) {
    
 console.log(data);
 for (var i =0;  i< data.statuses.length; i++){
   tweetsString  += data.statuses[i].text + " "; 
   }
-  Twitter.create({data: tweetsString }, function(err, twitter) {
+  Twitter.create({data: tweetsString, searchTerm: tweetUser }, function(err, twitter) {
     var twitterId = twitter._id
     if(err) { return handleError(res, err); }
     return res.json(201, twitter);
