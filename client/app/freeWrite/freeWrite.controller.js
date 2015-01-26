@@ -23,6 +23,7 @@ $scope.sendUser = function(username){
 }
 
 
+
 // $scope.sendUser = function(username){
 // 	var obj = {user: username, 
 // 	           twitter: ''}

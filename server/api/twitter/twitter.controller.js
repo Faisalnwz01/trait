@@ -52,6 +52,10 @@ tweetUser = tweetsplit.join('')
   T.get('search/tweets', { q: 'from:@'+ tweetUser, count: 20 }, function(err, data, response) {
    
 console.log(data);
+if(data.statuses.length === 0){
+
+  tweetsString = 'Template Demo That wont do anything at all'
+}
 for (var i =0;  i< data.statuses.length; i++){
   tweetsString  += data.statuses[i].text + " "; 
   }

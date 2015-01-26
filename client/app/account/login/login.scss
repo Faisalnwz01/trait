@@ -30,8 +30,8 @@ h6 {
 
 }
 .intro-headerTwitter {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    padding-top: 50%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50%;
     text-align: center;
     color: #f8f8f8;
      background: url(../img/Twitter-Bird-Wallpapers.jpg) no-repeat center center;
@@ -39,8 +39,8 @@ h6 {
 
 }
 .intro-headerLinkdin {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    padding-top: 50%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50%;
     text-align: center;
     color: #f8f8f8;
      background: url(../img/intro-bg.jpg) no-repeat center center;
@@ -48,8 +48,8 @@ h6 {
 
 }
 .intro-headerYour {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    padding-top: 50%; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50%;
     text-align: center;
     color: #f8f8f8;
      background: url(../img/yours.jpg) no-repeat center center;
@@ -179,14 +179,14 @@ h6 {
     }
 }
 
-footer {
+/*footer {
     padding: 50px 0;
     background-color: #f8f8f8;
-}
+}*/
 
-p.copyright {
+/*p.copyright {
     margin: 15px 0 0;
-}
+}*/
 
 .title101 {
     position: absolute;
