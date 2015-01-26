@@ -49,6 +49,7 @@ padding: 0px;
 @import 'admin/admin.scss';
 @import 'complete/complete.scss';
 @import 'formal/formal.scss';
+@import 'freeWrite/freeWrite.scss';
 @import 'main/main.scss';
 @import 'tweetdata/tweetdata.scss';
 @import 'modal/modal.scss';
@@ -128,4 +129,13 @@ padding: 0px;
 	top: 10px;
 	right: 10px;
 }
+
+.input-group .input-group-addon {
+  border: 0;
+  background: #03A9F4;
+}
+
+
+
+
 

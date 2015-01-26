@@ -8,6 +8,9 @@ angular.module('linkedinFullstackApp')
     }, {
       'title': 'Tweet Traits',
       'link': '/tweetdata'
+    }, {
+      'title': 'Text Traits',
+      'link': '/freeWrite'
     }];
 
     $scope.isCollapsed = true;

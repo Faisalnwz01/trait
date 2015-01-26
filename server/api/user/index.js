@@ -18,6 +18,7 @@ router.post('/update', controller.update)
 // router.get('/publish', controller.publish)
 router.post('/getWatson', controller.makeWatson);
 router.post('/getWatsonTweet', controller.makeTweetWatson);
+router.post('/freeText', controller.freeText); 
 
 
 

@@ -15,7 +15,8 @@ angular.module('linkedinFullstackApp')
           var widgetWidth = 900;
           var widgetHeight = 900;
           var theProfile = watsonData.watsonData[0]
-          var personImageUrl = "\/images\/app.png";
+          var personImageUrl = "\/images\/watsonData";
+
          
 
           d3.svg.singleArc = function() {
