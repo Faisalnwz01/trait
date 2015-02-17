@@ -18,7 +18,8 @@ See a live version of the app [here](http://trait.herokuapp.com/login).
 
 ### Live Demo
 
-![Sphynx Example](http://i.imgur.com/Rn6A5zk.gif)
+
+[![Video Label](http://img.youtube.com/vi/TheVideoID/0.jpg)](https://www.youtube.com/watch?v=uki71gN7ahc)
 _Above: An example of the working app.
 
 
