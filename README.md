@@ -19,7 +19,7 @@ See a live version of the app [here](http://trait.herokuapp.com/login).
 ### Live Demo
 
 
-[![Video Label](http://img.youtube.com/vi/TheVideoID/0.jpg)](https://www.youtube.com/watch?v=uki71gN7ahc)
+[![Video Label](http://img.youtube.com/vi/dK9e_PgWLEo/0.jpg)](https://www.youtube.com/watch?dK9e_PgWLEo)
 _Above: An example of the working app.
 
 
